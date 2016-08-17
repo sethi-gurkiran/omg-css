@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Stateful application</title>
-    <meta charset="utf-8">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Stateful application</title>
+
+      <!-- Bootstrap CSS -->
+      <link href="../../css/bootstrap.min.css" rel="stylesheet">
+      <link href="../../css/style.css" rel="stylesheet" type="text/css">
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="../../js/bootstrap.min.js"></script>
+      <script src="../../js/index.js"></script>
   </head>
   <body>
-    <div id="react-app">
-      <!-- react components will be rendered here -->
-      <h3>Unsuccessful rendering for 1</h3>
+    <div class="container-fluid">
+      <div class="row">
+        <div id="react-app">
+          <h1>hello</h1>
+           <!-- react components will be rendered here -->
+          <h3>Unsuccessful rendering for 1</h3>
+        </div>
+      <br>
+        <div id="react-app-2">
+          <!-- react components will be rendered here -->
+          <h3>Unsuccessful rendering for 2</h3>
+        </div>
+  
+      </div>
     </div>
-    <br>
-    <div id="react-app-2">
-      <!-- react components will be rendered here -->
-      <h3>Unsuccessful rendering for 2</h3>
-    </div>
-    <script src="../ReactFiles/react.js"></script> 
+
+
+  <script src="../ReactFiles/react.js"></script> 
     <script src="../ReactFiles/react-dom.js"></script>
    <!-- <script src="scoreboard_script.js"> -->
     <script>
@@ -81,14 +101,14 @@ var Excel = React.createClass({
       this.setState({
         edit : null,
         data : data,
-      })
+      });
     },
 
     render : function() {
         return (
-            React.DOM.table(null,
+            React.DOM.table({id: "omgtable", className: "table table-striped table-hover" },
                 React.DOM.thead({onClick: this._sort},
-                    React.DOM.tr(null,
+                    React.DOM.tr({className :  "header"},
                         this.props.headers.map(function(title, idx) {
                             return React.DOM.th({key: idx}, title);
                         })
@@ -142,5 +162,6 @@ ReactDOM.render(
 );
 
     </script>
+
   </body>
 </html>
