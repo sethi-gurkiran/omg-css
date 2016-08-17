@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $('.dropdown-toggle').dropdown();
 
-  $('#criteriadiv').text(functionalitycriteria);
+  $('#criteriadiv').html(functionalitycriteria);
 
   $('#teamdropdown li > a').click(function(){
     $('#text').text($(this).html());
@@ -44,22 +44,25 @@ $(document).ready(function(){
 
 });
 
-var functionalitycriteria = "For Feedback Mechanism:" +
-"Containerization – can the software easily plugged in to existing software?" +
-"Robustness – is there both an analytics component and a feedback mechanism?"+
-"Intrusiveness – does the software balance its main goal of asking for user feedback with users want for unobtrusive software?"+
-"Minimization – does the software stay out of the way of site content and user interaction?";
+var functionalitycriteria = "<h1>Functionality Criteria</h1>"+
+"<h4>All submissions must meet the following criteria to ensure that they adhere to a common, usable standard.</h4>"+
+"<table><tr><th>Criteria</th><th>Description</th></tr>"+
+"<tr><td>Containerization</td><td>can the software easily plugged in to existing software?</td></tr>" +
+"<tr><td>Robustness</td><td>is there both an analytics component and a feedback mechanism?</td></tr>"+
+"<tr><td>Intrusiveness</td><td>does the software balance its main goal of asking for user feedback with users want for unobtrusive software?</td></tr>"+
+"<tr><td>Minimization</td><td>does the software stay out of the way of site content and user interaction?</td></tr></table>";
 
 var uicriteria = "<h1>UI/UX Criteria</h1>" +
-"<h4>All submissions must meet the following criteria to ensure that they adhere to a common, usable standard.</h2>"+
-"•	Actionable - the tasks and goals that the service is designed for are clear and easy to understand for users – e.g. do things look like their function? Is it obvious what to press and what not to?"+
-"<br>•	Consistent - consistency of IA, visual, and interaction design throughout the service"+
-"<br>•	Content - appropriate content for the service"+
-"<br>•	Responsive - works well across platforms of Mobile and Laptop"+
-"<br>•	Flow - does the user know where to start on the page? Is the path from start to finish clearly defined?"+
-"<br>•	Information Architecture (IA) - good navigation; clear and consistently presented labels; precise and well defined iconography; orientation within the service is clear; links are obvious."+
-"<br>•	Interface - the interface doesn’t get in the way of the content•	Purpose - clear what the service is supposed to let you achieve"
-"<br>•	Visual design - aesthetically pleasing visual design";
+"<h4>All submissions must meet the following criteria to ensure that they adhere to a common, usable standard.</h4>"+
+"<table><tr><th>Criteria</th><th>Description</th></tr>"+
+"<tr><td>Actionable</td><td>the tasks and goals that the service is designed for are clear and easy to understand for users – e.g. do things look like their function? Is it obvious what to press and what not to?</td></tr>"+
+"<tr><td>Consistent</td><td>consistency of IA, visual, and interaction design throughout the service</td></tr>"+
+"<tr><td>Conten</td><td>appropriate content for the service</td></tr>"+
+"<tr><td>Responsive</td><td>works well across platforms of Mobile and Laptop</td></tr>"+
+"<tr><td>Flow</td><td>does the user know where to start on the page? Is the path from start to finish clearly defined?</td></tr>"+
+"<tr><td>Information Architecture (IA)</td><td>good navigation; clear and consistently presented labels; precise and well defined iconography; orientation within the service is clear; links are obvious.</td></tr>"+
+"<tr><td>Interface</td><td>the interface doesn’t get in the way of the content•	Purpose - clear what the service is supposed to let you achieve</td></tr>"
+"<tr><td>Visual design</td><td>aesthetically pleasing visual design</td></tr></table>";
 
 var agilecriteria = "placeholder";
 
@@ -67,4 +70,6 @@ var devopscriteria = "placeholder";
 
 var testcriteria = "placeholder";
 
-var defaultcriteria = "placeholder";
+var defaultcriteria = "<h1>Criteria</h1>"+
+"<h4>All submissions must meet the following criteria to ensure that they adhere to a common, usable standard.</h4>"+
+"<table><tr><th>Criteria</th><th>Description</th></tr></table>";
