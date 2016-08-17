@@ -72,8 +72,8 @@ body{
 }
 
 img{
-    -webkit-filter: opacity(70%); /* Chrome, Safari, Opera */
-    filter: opacity(70%);
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
 }
 
 #judge{
