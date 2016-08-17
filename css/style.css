@@ -3,19 +3,23 @@
     padding: 4%;
     color: #47AAA8;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+}
+
+#headline h1{
+    font-size: 36pt;
 }
 
 #headline p{
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .menu-panel{
-    width: 85%;
+    width: 75%;
     background-color: gainsboro;
     display: block;
     position: relative;
-    padding-bottom: 85%;
+    padding-bottom: 75%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 15px;
@@ -51,7 +55,7 @@
 
 #setup{
     text-align: right;
-    margin-right: 1%;
+    margin-right: 3%;
 }
 
 #setup .glyphicon{
