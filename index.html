@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap 101 Template</title>
+      <title>Bootstrap 101 Template</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+      <!-- Bootstrap CSS -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet" type="text/css">
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
       <div class="container-fluid">
           <div class="row" id="headline">
               <div class="col-sm-12">
                   <h1>New Hire Hackathon</h1>
-                  <h4>Scoring for Judges App</h4>
+                  <p>Scoring for Judges App</p>
               </div>
           </div>
-          <div class="row" id="panel">
+          <div class="row" id="setup" style="margin-bottom: 15px">
+              <div class="col-sm-12">
+                  <h4 style="font-size: 12pt"><span class="glyphicon glyphicon-cog"></span> Criteria Setup</h4>
+                  <h4 style="font-size: 12pt"><span class="glyphicon glyphicon-th-list"></span> Hackathon Directory</h4>
+              </div>
+          </div>
+          <div class="row" id="panel" style="margin-bottom: 20px">
               <div class="col-sm-4">
                   <div class="menu-panel" id="judging">
+                      <div class="content">
+                          <div>
+                              <h4>Judging</h4>
+                          </div>
+                      </div>
                   </div>
               </div>
               <div class="col-sm-4">
                   <div class="menu-panel" id="scoreboard">
+                      <div class="content">
+                          <div><h4>Scoreboard</h4></div>
+                      </div>
                   </div>
               </div>
               <div class="col-sm-4">
                   <div class="menu-panel" id="team-setup">
+                      <div class="content">
+                          <div>
+                              <h4>Team Setup</h4>
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
