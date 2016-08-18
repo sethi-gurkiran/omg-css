@@ -137,7 +137,7 @@ img {
     filter: grayscale(100%);
 }
 
-#judge {
+.menu-pic {
     margin-top: 0px;
     width: 100%;
 }
@@ -186,4 +186,28 @@ img {
     padding-bottom: 8px;
     padding-top: 8px;
     border: none;
+}
+
+.btn-default {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    border-radius: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    position: inherit;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    border: none;
+}
+
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default:hover, 
+.btn-default.active, 
+.btn-default.active, 
+.open > .dropdown-toggle.btn-default {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    box-shadow: none;
+    outline: 0 none;
 }
