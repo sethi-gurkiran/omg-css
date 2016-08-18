@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Hackathon - Judging</title>
+  <title>Judging Panel</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -14,12 +14,31 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
+
+  <!-- Firebase init scripts -->
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAcTwR_p6wGOSPqbMVKXB5HLW9YVvKRoN0",
+      authDomain: "omg-css.firebaseapp.com",
+      databaseURL: "https://omg-css.firebaseio.com",
+      storageBucket: "",
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Supporting script files -->
   <script src="judging.js"></script>
+
+  <!-- Local css formatting for criteria table -->
   <style>
-  table, th, td {
-    border: 1px solid black;
-}
-</style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
+
 </head>
 <body>
   <div class="container-fluid">
@@ -72,10 +91,10 @@
       </div>
     </div>
     <div class="row" id="ratingdiv">
-      <div class="col-sm-4">
+      <div class="col-sm-5">
         <h2> Please enter your rating: </h2>
       </div>
-      <div class="col-sm-8">
+      <div class="col-sm-7">
         <div class="dropdown">
           <ul class="nav nav-pills left">
             <li class="dropdown active span8">

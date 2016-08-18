@@ -26,6 +26,7 @@ $(document).ready(function(){
 
       case "Agile Methodology":
       $('#criteriadiv').append(agilecriteria);
+      queryAgileCriteria();
       break;
 
       case "DevOps":
@@ -43,6 +44,18 @@ $(document).ready(function(){
   });
 
 });
+
+function queryAgileCriteria () {
+ 		var rootRef = new Firebase('https://shopshop1.firebaseio.com/groceries');	// create a reference to our database
+
+ 		rootRef.on("value", function(snap) {
+ 			var resultObj = snap.val();
+ 			var category = Object.keys(resultObj);
+      console.log(category);
+    }, function (errorObject) {
+   			console.log("The read failed: " + errorObject.code);
+   		});
+ 	}
 
 var functionalitycriteria = "<h1>Functionality Criteria</h1>"+
 "<h4>All submissions must meet the following criteria to ensure that they adhere to a common, usable standard.</h4>"+
