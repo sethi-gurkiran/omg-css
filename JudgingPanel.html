@@ -28,6 +28,25 @@
     </script>
     <!-- Supporting script files -->
     <script src="judging.js"></script>
+    <scrip src="js/classie.js"></scrip>
+    <script>
+        function init() {
+            window.addEventListener('scroll', function (e) {
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop
+                    , shrinkOn = 300
+                    , header = document.querySelector("header");
+                if (distanceY > shrinkOn) {
+                    classie.add(header, "smaller");
+                }
+                else {
+                    if (classie.has(header, "smaller")) {
+                        classie.remove(header, "smaller");
+                    }
+                }
+            });
+        }
+        window.onload = init();
+    </script>
     <!-- Local css formatting for criteria table -->
     <style>
         table,
@@ -41,12 +60,7 @@
 <body>
     <header>
         <h1>New Hire Hackathon</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html">Judge</a>
-            <a href="index.html">Scoreboard</a>
-            <a href="index.html">Team</a>
-        </nav>
+        <nav> <a href="index.html">Home</a> <a href="index.html">Judge</a> <a href="index.html">Scoreboard</a> <a href="index.html">Team</a> </nav>
     </header>
     <div class="container-fluid">
         <div class="row">
@@ -117,4 +131,5 @@
         </div>
     </div>
 </body>
+
 </html>

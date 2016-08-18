@@ -14,11 +14,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <scrip src="js/classie.js"></scrip>
     <script>
         function init() {
             window.addEventListener('scroll', function (e) {
                 var distanceY = window.pageYOffset || document.documentElement.scrollTop
-                    , shrinkOn = 300
+                    , shrinkOn = 50
                     , header = document.querySelector("header");
                 if (distanceY > shrinkOn) {
                     classie.add(header, "smaller");
@@ -56,7 +57,7 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a class="menu-panel" id="scoreboard">
+                <a href="#" class="menu-panel" id="scoreboard">
                     <div class="content">
                         <div> <img src="img/trophy.jpg" class="menu-pic">
                             <h4>Scoreboard</h4>
@@ -66,7 +67,7 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a class="menu-panel" id="team-setup">
+                <a href="#" class="menu-panel" id="team-setup">
                     <div class="content">
                         <div> <img src="img/team.jpg" class="menu-pic">
                             <h4>Team Setup</h4> 
