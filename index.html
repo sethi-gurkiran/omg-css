@@ -13,13 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/classie.js"></script>
     <script src="js/index.js"></script>
     <script>
         function init() {
             window.addEventListener('scroll', function (e) {
                 var distanceY = window.pageYOffset || document.documentElement.scrollTop
-                    , shrinkOn = 20
+                    , shrinkOn = 300
                     , header = document.querySelector("header");
                 if (distanceY > shrinkOn) {
                     classie.add(header, "smaller");
@@ -37,10 +36,8 @@
 
 <body>
     <header>
-        <div class="container clearfix">
-            <h1>New Hire Hackathon</h1>
-            <p>Scoring for Judges App</p>
-        </div>
+        <h1>New Hire Hackathon</h1>
+        <p>Scoring for Judges App</p>
     </header>
     <div class="container-fluid">
         <div class="row" id="setup" style="margin-bottom: 20px">
@@ -52,19 +49,15 @@
                 <a href="JudgingPanel.html" class="menu-panel" id="judging">
                     <div class="content">
                         <div> <img src="img/judge.jpg" id="judge">
-                            <h4>Judge</h4>
-                            <p>Enter your scores for the section you are judging</p>
-                        </div>
+                            <h4>Judging</h4> </div>
                     </div>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a class="menu-panel" id="scoreboard">
                     <div class="content">
-                        <div> <img src="img/trophy.jpg" id="judge">
-                            <h4>Scoreboard</h4>
-                            <p>Overview of each team's performance</p>
-                        </div>
+                        <div>
+                            <h4>Scoreboard</h4></div>
                     </div>
                 </a>
             </div>
@@ -72,14 +65,11 @@
                 <a class="menu-panel" id="team-setup">
                     <div class="content">
                         <div> <img src="img/team.jpg" id="judge">
-                            <h4>Team Setup</h4>
-                            <p>Manage the partiticpating teams</p>
-                        </div>
+                            <h4>Team Setup</h4> </div>
                     </div>
                 </a>
             </div>
         </div>
     </div>
 </body>
-
 </html>

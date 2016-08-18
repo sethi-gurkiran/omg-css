@@ -5,19 +5,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <title>Judging Panel</title>
-    
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    
     <!-- Firebase init scripts -->
     <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
@@ -33,26 +28,6 @@
     </script>
     <!-- Supporting script files -->
     <script src="judging.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/index.js"></script>
-    <script>
-        function init() {
-            window.addEventListener('scroll', function (e) {
-                var distanceY = window.pageYOffset || document.documentElement.scrollTop
-                    , shrinkOn = 20
-                    , header = document.querySelector("header");
-                if (distanceY > shrinkOn) {
-                    classie.add(header, "smaller");
-                }
-                else {
-                    if (classie.has(header, "smaller")) {
-                        classie.remove(header, "smaller");
-                    }
-                }
-            });
-        }
-        window.onload = init();
-    </script>
     <!-- Local css formatting for criteria table -->
     <style>
         table,
@@ -65,26 +40,26 @@
 
 <body>
     <header>
-        <div class="container clearfix">
-            <h1>New Hire Hackathon</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="#">Judge</a>
-                <a href="#">Scoreboard</a>
-                <a href="#">Team</a>
-            </nav>
-        </div>
+        <h1>New Hire Hackathon</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html">Judge</a>
+            <a href="index.html">Scoreboard</a>
+            <a href="index.html">Team</a>
+        </nav>
     </header>
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
                 <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Select Team<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <li><a href="#">OMG-CSS</a></li>
-                        <li><a href="#">Other Team</a></li>
+                    <ul class="nav nav-pills left">
+                        <li class="dropdown active span8">
+                            <a class="dropdown-toggle" id="inp_impact" data-toggle="dropdown"> <i class="icon icon-envelope icon-white"></i> <span id="text">Select Team</span><span class="caret"></span> </a>
+                            <ul ID="teamdropdown" class="dropdown-menu">
+                                <li><a>OMG-CSS</a></li>
+                                <li><a>Other Team</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -137,7 +112,7 @@
                     <label for="comment">Comments:</label>
                     <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
-                <button type="button" class="btn btn-default">Submit</button>
+                <button type="button" class="btn btn-primary">Submit</button>
             </div>
         </div>
     </div>
