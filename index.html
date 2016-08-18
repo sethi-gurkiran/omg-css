@@ -15,15 +15,40 @@
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="js/bootstrap.min.js"></script>
       <script src="js/index.js"></script>
+      <script>
+            function init() {
+                window.addEventListener('scroll', function(e){
+                    var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                        shrinkOn = 300,
+                        header = document.querySelector("header");
+                    if (distanceY > shrinkOn) {
+                        classie.add(header,"smaller");
+                    } else {
+                        if (classie.has(header,"smaller")) {
+                            classie.remove(header,"smaller");
+                        }
+                    }
+                });
+            }
+            window.onload = init();
+      </script>
   </head>
   <body>
       <div class="container-fluid">
-          <div class="row" id="headline">
+          <div class="row">
               <div class="col-sm-12">
-                  <h1>New Hire Hackathon</h1>
-                  <p>Scoring for Judges App</p>
+                <header>
+    <!--                <div class="row" id="headline">-->
+
+                          <h1>New Hire Hackathon</h1>
+                          <p>Scoring for Judges App</p>
+
+    <!--              </div>-->
+                </header>
               </div>
           </div>
+          
+          
           <div class="row" id="setup" style="margin-bottom: 20px">
               <div class="col-sm-12" style="margin-bottom: 5px">
                   <a href="#" style="font-size: 12pt" data-toggle="tooltip" data-placement="left" title="Set up the list of judging criteria"><span class="glyphicon glyphicon-cog"></span> Criteria Setup</a>
