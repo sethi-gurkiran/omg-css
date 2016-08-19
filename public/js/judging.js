@@ -3,6 +3,8 @@ $(document).ready(function(){
 
   $('#criteriadiv').html(functionalitycriteria);
 
+  populateTeamsDropdown();
+
   $('#teamdropdown li > a').click(function(){
     $('#text').text($(this).html());
   });
@@ -25,8 +27,7 @@ $(document).ready(function(){
       break;
 
       case "Agile Methodology":
-      $('#criteriadiv').append(agilecriteria);
-      queryAgileCriteria();
+      queryCriteria("uicriteria");
       break;
 
       case "DevOps":
@@ -45,17 +46,26 @@ $(document).ready(function(){
 
 });
 
-function queryAgileCriteria () {
- 		var rootRef = new Firebase('https://shopshop1.firebaseio.com/groceries');	// create a reference to our database
+// Queries the db for criteria
+function queryCriteria(selectedCriteria) {
 
- 		rootRef.on("value", function(snap) {
- 			var resultObj = snap.val();
- 			var category = Object.keys(resultObj);
-      console.log(category);
-    }, function (errorObject) {
-   			console.log("The read failed: " + errorObject.code);
-   		});
- 	}
+  $.get("/c/" + selectedCriteria, function(data){
+    var htmldata = data.content.data.html;
+    $('#criteriadiv').append(htmldata);
+  });
+
+}
+
+// Queries the db for team names
+function populateTeamsDropdown() {
+  $.get("/t/", function(data) {
+    var teamNames = data.content.data;
+    $.each(teamNames, function(index, element) {
+      console.log(element.name);
+      $("#teamdropdown").append("<li><a>" + element.name + "</a></li>");
+    });
+  })
+}
 
 var functionalitycriteria = "<h1>Functionality Criteria</h1>"+
 "<h4>All submissions must meet the following criteria to ensure that they adhere to a common, usable standard.</h4>"+

@@ -7,30 +7,17 @@
 
   <title>Judging Panel</title>
 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+  <script src="res/bootstrap.min.js"></script>
 
-  <!-- Firebase init scripts -->
-  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyAcTwR_p6wGOSPqbMVKXB5HLW9YVvKRoN0",
-      authDomain: "omg-css.firebaseapp.com",
-      databaseURL: "https://omg-css.firebaseio.com",
-      storageBucket: "",
-    };
-    firebase.initializeApp(config);
-  </script>
 
   <!-- Supporting script files -->
-  <script src="judging.js"></script>
+  <script src="js/judging.js"></script>
 
   <!-- Local css formatting for criteria table -->
   <style>
@@ -58,8 +45,6 @@
                 <span id="text">Select Team</span><span class="caret"></span>
               </a>
               <ul ID="teamdropdown" class="dropdown-menu">
-                <li><a>OMG-CSS</a></li>
-                <li><a>Other Team</a></li>
               </ul>
             </li>
           </ul>

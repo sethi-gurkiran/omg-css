@@ -4,17 +4,17 @@ var path = require('path');
 var mongoose = require('mongoose');
 
 // Connect to db
-// mongoose.connect('mongodb://localhost/ourdb');
-// var db = mongoose.connection;
-// db.on('error', function() { console.log('connection error'); });
-// db.once('open', function (callback) {
-//     console.log("database connected");
-// });
+mongoose.connect('mongodb://localhost/testdb');
+var db = mongoose.connection;
+db.on('error', function() { console.log('connection error'); });
+db.once('open', function (callback) {
+    console.log("database connected");
+});
 
 // Import route handlers
-// var zipcodes = require('./routes/zip');
+ var routes = require('./routes/index');
 
-// Import Zip model
+// Import Zip mod
 // var ZipCode = require('./models/zipcodeModel');
 
 var app = express();
@@ -26,11 +26,8 @@ app.set('view engine', 'ejs'); // use either jade or ejs
 app.use(express.static('public'));
 
 // app.use('/zip', zipcodes);
+app.use('/', routes);
 
-// routes
-app.get('/', function(req, res) {
-  res.render('index');
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -41,5 +38,6 @@ app.use(function(req, res, next) {
 });
 
 // Set server port
-app.listen(3000);
-console.log('server is running');
+app.listen(3000, function(){
+  console.log('server is running');
+});
