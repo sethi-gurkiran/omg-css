@@ -6,27 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home</title>
+    
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
-    <scrip src="js/classie.js"></scrip>
+    <script src="js/classie.js"></script>
     <script>
         function init() {
-            window.addEventListener('scroll', function (e) {
-                var distanceY = window.pageYOffset || document.documentElement.scrollTop
-                    , shrinkOn = 50
-                    , header = document.querySelector("header");
+            window.addEventListener('scroll', function(e){
+                console.log('scroll');
+                var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                    shrinkOn = 100,
+                    header = document.querySelector("header");
                 if (distanceY > shrinkOn) {
-                    classie.add(header, "smaller");
-                }
-                else {
-                    if (classie.has(header, "smaller")) {
-                        classie.remove(header, "smaller");
+                    classie.add(header,"smaller");
+                } else {
+                    if (classie.has(header,"smaller")) {
+                        classie.remove(header,"smaller");
                     }
                 }
             });
@@ -34,11 +36,12 @@
         window.onload = init();
     </script>
 </head>
-
 <body>
     <header>
-        <h1>New Hire Hackathon</h1>
-        <p>Scoring for Judges App</p>
+        <div class="container clearfix">
+            <h1>New Hire Hackathon</h1>
+            <p>Scoring for Judges App</p>
+        </div>
     </header>
     <div class="container-fluid">
         <div class="row" id="setup" style="margin-bottom: 20px">
@@ -50,7 +53,7 @@
                 <a href="JudgingPanel.html" class="menu-panel" id="judging">
                     <div class="content">
                         <div> <img src="img/judge.jpg" class="menu-pic">
-                            <h4>Judging</h4> 
+                            <h4>Judging</h4>
                             <p>Enter your scores for the section you are judging</p>
                         </div>
                     </div>

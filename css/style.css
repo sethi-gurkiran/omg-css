@@ -11,11 +11,13 @@ header {
     background-color: #353535;
     color: #47AAA8;
     text-align: center;
+    
     -webkit-transition: height 0.5s;
     -moz-transition: height 0.5s;
     -ms-transition: height 0.5s;
     -o-transition: height 0.5s;
     transition: height 0.5s;
+    
     -webkit-box-shadow: 0 6px 4px -4px grey;
     -moz-box-shadow: 0 6px 4px -4px grey;
     box-shadow: 0 6px 4px -4px grey;
@@ -60,8 +62,33 @@ header.smaller p {
     font-size: 12px;
 }
 
+@media all and (max-width: 510px) {
+    header h1 {
+        display: inline-block;
+        font-size: 30pt;
+        line-height: 55px;
+        height: 100px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    
+    header p {
+        font-size: 12pt;
+        line-height: 50px;
+        height: 3px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+}
+
 .container-fluid {
-    padding-top: 420px;
+    padding-top: 220px;
 }
 
 .menu-panel {
@@ -109,8 +136,9 @@ header.smaller p {
 .content h4 {
     text-align: center;
     width: 100%;
-    margin-top: 17%;
-    color: #353535;
+    margin-top: 20%;
+    color: #6E6E6E;
+    transition: all .2s;
 }
 
 .content p {
@@ -118,20 +146,22 @@ header.smaller p {
 }
 
 .menu-panel:hover h4 {
-    display: none;
+    transform: translate(0,-22px);
+    -webkit-transform: translate(0,-22px);
+    -o-transform: translate(0,-22px); 
+    -moz-transform: translate(0,-22px);
 }
-
 .menu-panel:hover p {
     text-align: center;
     width: 100%;
-    margin-top: 11%;
     display: block;
-    padding: 15px;
+    position: fixed;
+    margin-top: -22px;
+    padding-left: 15px;
+    padding-right: 15px;
     text-color: #353535;
-    font-weight: 500;
     color: #999999;
-    font-size: 16px;
-    
+    font-size: 14px;
 }
 
 img {
@@ -161,6 +191,13 @@ img {
     font-weight: 400;
 }
 
+#setup a:hover{
+    font-weight: 500;
+}
+
+#setup .glyphicon:hover {
+    color: #358483;
+}
 
 /* judging.html*/
 .btn-default:focus,
@@ -213,4 +250,18 @@ img {
     color: white;
     box-shadow: none;
     outline: 0 none;
+}
+
+nav a{
+    padding: 5px;
+    color: #47aaa8;
+    font-size: 16px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    color: #47aaa8;
+    font-weight: 500;
 }
